@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "A4uyXzoBETAEUpuSV6/5OqXus4M3EHCPn4uJUMlMubkjXfoLsVboomGKzYqudnp/1JLqRw+lkKZWSaIJv6vrqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\quest\\source\\repos\\VirtualPet\\VirtualPet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\quest\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.1\\microsoft.windowsdesktop.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\quest\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.1\\microsoft.netcore.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\quest\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.1\\microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\quest\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.1\\microsoft.netcore.app.host.win-x64.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
