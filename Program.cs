@@ -1,55 +1,45 @@
-﻿string userPet = null;
-userPet = PetInput(userPet);
+﻿Menu menu = new Menu();
+Pet pet = new Pet(menu);
+TypeSelection();
 
+var isOpen = true;
 
-string PetInput(string userPet)
+while (pet.Health > 0 && isOpen)
 {
-    string[] pets = { "собака", "кошка", "попугай" };
-
-    bool isOpen = true;
-    while (isOpen)
-    {
-        Console.WriteLine("'1' - Выбрать питомца.\n'2' - рандомный питомец.");
-        Console.Write("Ваш выбор: ");
-        switch (Console.ReadLine())
-        {
-            case "1":
-                Console.Clear(); Console.SetCursorPosition(0, 3);
-
-                Console.WriteLine("Питомцы:"); foreach (string str in pets) Console.Write(" | " + str);
-                Console.Write(" |");
-                Console.SetCursorPosition(0, 0);
-                Console.Write("Ваш выбор: ");
-                switch (Console.ReadLine())
-                {
-                    case "собака": userPet = pets[0]; break;
-                    case "кошка": userPet = pets[1]; break;
-                    case "попугай": userPet = pets[2]; break;
-                    default: WriteError(); break;
-                }
-                Console.ReadKey(); Console.Clear(); isOpen = false; break;
-
-            case "2":
-                Console.Clear();
-                Random randPet = new Random();
-                int i = randPet.Next(0, 2);
-                userPet = pets[i];
-
-                Console.Write($"Вам подарили {userPet}\b");
-                if (userPet == pets[0] || userPet == pets[1]) Console.Write("у");
-                else Console.Write("я"); isOpen = false; break;
-            default: WriteError(); break;
-        }
-    }
-    Console.Write("\nПридумайте имя для вашего питомца: ");
-    string petName = Console.ReadLine();
-    Console.WriteLine($"\nУ вас {userPet} по имени {petName}");
-    return userPet;
+    menu.PrintMenu(pet);
 }
-void WriteError()
+
+void TypeSelection()
 {
-    ConsoleColor defaultColor = Console.ForegroundColor;
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("Неизвестная команда");
-    Console.ForegroundColor = defaultColor;
+    Console.SetCursorPosition(30, 0);
+    Console.WriteLine("| Мой Виртуальный Питомец |");
+
+    Console.WriteLine("'1' - Собака; '2' - Кошка; '3' - Хомяк; '4' - Попугай;");
+    Console.Write("Выберите животное: ");
+    switch (Console.ReadLine())
+    {
+        case "1":
+            pet.Type = "Собака";
+            pet.Health = 100; pet.Hunger = 60; pet.Thirst = 50;
+            menu.Max(pet);
+            break;
+        case "2":
+            pet.Type = "Кошка";
+            pet.Health = 80; pet.Hunger = 80; pet.Thirst = 40;
+            menu.Max(pet);
+            break;
+        case "3":
+            pet.Type = "Хомяк";
+            pet.Health = 20; pet.Hunger = 25; pet.Thirst = 20;
+            menu.Max(pet);
+            break;
+        case "4":
+            pet.Type = "Попугай";
+            pet.Health = 30; pet.Hunger = 15; pet.Thirst = 10;
+            menu.Max(pet);
+            break;
+    }
+
+    Console.Write("Придумайте имя для питомца: ");
+    pet.Name = Console.ReadLine(); Console.Clear();
 }

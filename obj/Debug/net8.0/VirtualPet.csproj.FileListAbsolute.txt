@@ -12,3 +12,4 @@ C:\Users\quest\source\repos\VirtualPet\obj\Debug\net8.0\refint\VirtualPet.dll
 C:\Users\quest\source\repos\VirtualPet\obj\Debug\net8.0\VirtualPet.pdb
 C:\Users\quest\source\repos\VirtualPet\obj\Debug\net8.0\VirtualPet.genruntimeconfig.cache
 C:\Users\quest\source\repos\VirtualPet\obj\Debug\net8.0\ref\VirtualPet.dll
+C:\Users\quest\source\repos\VirtualPet\obj\Debug\net8.0\VirtualPet.sourcelink.json
